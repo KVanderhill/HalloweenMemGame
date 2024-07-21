@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'October Crow';
+    src: url('OctoberCrow.woff2') format('woff2'),
+        url('OctoberCrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Scary Halloween Font';
+    src: url('ScaryHalloweenFont-Bold.woff2') format('woff2'),
+        url('ScaryHalloweenFont-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
