@@ -37,6 +37,7 @@ body {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .game-info {
@@ -47,7 +48,7 @@ body {
 .game-container {
     margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
@@ -184,14 +185,45 @@ body {
         font-size: 8em;
     }
 }
-
+/*responsive styles*/
 @media (max-width: 600px) {
+    .page-title {
+        font-size: 3em;
+    }
     .game-container {
-        grid-template-columns: repeat(2, auto)
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+    .card {
+        height: 125px;
+        width: 85px;
+
     }
 
     .game-info-container {
         flex-direction: column;
         align-items: center;
     }
-}
+    .game-info {
+        font-size: 2em;
+    }
+    }
+    @media (max-width: 400px) {
+        .page-title {
+            font-size: 2em;
+        }
+        .game-container {
+            grid-template-columns: 1fr;
+            grid-gap: 5px;
+        }
+        .card {
+            height: 100px;
+            width: 70px;
+
+        }
+
+        .game-info {
+            font-size: 1.5em;
+
+        }
+    }

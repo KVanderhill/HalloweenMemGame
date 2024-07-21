@@ -2,20 +2,20 @@
 /*Adds audio in game from files*/
 class AudioController {
     constructor() {
-        this.bgMusic = new Audio('./assets/audio/creepy.mp3');
+        //this.bgMusic = new Audio('./assets/audio/creepy.mp3');
         this.flipSound = new Audio('./assets/audio/flip.wav');
         this.matchSound = new Audio('./assets/audio/match.wav');
         this.victorySound = new Audio('./assets/audio/victory.wav');
         this.gameOverSound = new Audio('./assets/audio/gameOver.wav');
-        this.bgMusic.volume = 0.5;
-        this.bgMusic.loop = true;
+        //this.bgMusic.volume = 0.2;
+        //this.bgMusic.loop = true;
     }
     startMusic() {
-        this.bgMusic.play();
+       //this.bgMusic.play();
     }
-    stopMusic() {
-        this.bgMusic.pause();
-        this.bgMusic.currentTime = 0;
+   stopMusic() {
+       // this.bgMusic.pause();
+       //this.bgMusic.currentTime = 0;
     }
     flip() {
         this.flipSound.play();
@@ -24,11 +24,11 @@ class AudioController {
         this.matchSound.play();
     }
     victory() {
-        this.stopMusic();
+        //this.stopMusic();
         this.victorySound.play();
     }
     gameOver() {
-        this.stopMusic();
+        //this.stopMusic();
         this.gameOverSound.play();
     }
 }
@@ -50,7 +50,7 @@ class MixOrMatch {
         this.matchedCards = [];
         this.busy = true;
         setTimeout(() => {
-            this.audioController.startMusic();
+            //this.audioController.startMusic();
             this.shuffleCards(this.cardsArray);
             this.countdown = this.startCountdown();
             this.busy = false;
