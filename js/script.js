@@ -161,4 +161,5 @@ function ready() {
             game.flipCard(card);
         });
     });
+   
 }
