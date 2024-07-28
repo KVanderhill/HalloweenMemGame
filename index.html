@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="styles.css" rel="stylesheet">
-        <script src="script.js" async></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/styles.css" rel="stylesheet">
         <title>Monster Matchup</title>
     </head>
     <body>
         <h1 class="page-title">Monster Matchup</h1>
+
+  <!-- Meatballs Menu for Background Color Selection -->
+  <div class="menu">
+    <button class="menu-button">&#x22EE;</button>
+    <div class="menu-content">
+        <button class="color-option" data-color="linear-gradient(to right, #b33e04, #632201)">Original</button>
+        <button class="color-option" data-color="linear-gradient(to right, #1c1c21, #606364)">Dark Blue</button>
+        <button class="color-option" data-color="linear-gradient(to right, #121111, #454545)">Black-Gray</button>
+        <button class="color-option" data-color="linear-gradient(to right, #1a1113, #5c5361)">Muted Purple</button>
+        <button class="color-option" data-color="linear-gradient(to right, #1a1913, #757456)">Moss Green</button>
+    </div>
+</div>
+
         <div class="overlay-text visible">
             Click to Enter
         </div>
@@ -31,6 +42,7 @@
                 </div>
             </div>
             
+            
             <div class="card">
                 <div class="card-back card-face">
                     <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
@@ -176,5 +188,7 @@
             </div>
             </div>
         </div>
+        <script src="js/script.js" async></script>
+        <script src="js/theme.js" async></script>
     </body>
 </html>
