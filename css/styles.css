@@ -19,12 +19,14 @@ html{
     font-family: October Crow;
 }
 
+/*background color*/
 body {
     margin: 0;
     background: radial-gradient(#b33e04, #632201);
 
 }
 
+/*main title for game*/
 .page-title {
     color:whitesmoke;
     font-family: Scary Halloween, serif;
@@ -33,15 +35,18 @@ body {
     font-size: 6em;
 }
 
+/*adjusts time & flips location*/
 .game-info-container {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
+    margin-top: -120px; /* Added to move the game info container up */
 }
 
+/*allows size adjustment of timer & flips font*/
 .game-info {
     color: whitesmoke;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .game-container {
@@ -52,6 +57,8 @@ body {
     justify-content: center;
     perspective: 500px;
 }
+
+/*card size*/
 .card {
     position: relative;
     height: 175px;
@@ -106,10 +113,12 @@ body {
     font-family: Scary Halloween, serif;
     transition: background-color 500ms, font-size 500ms;
 }
+
 /*replay*/
 .overlay-text-small {
     font-size: .3em;
 }
+
 /*click to enter*/
 .overlay-text.visible {
     display: flex;
@@ -161,6 +170,7 @@ body {
 .card-back:hover .ghost {
     transform: translateY(0);
 }
+
 /*dance effect for images*/
 @keyframes dance {
     0%, 100% {
@@ -196,11 +206,7 @@ body {
     }
 }
 
-
-
-/* Existing CSS */
-
-/* New styles for the meatballs menu and background color options */
+/* New styles for menu and background color options */
 .menu {
     position: relative;
     display: inline-block;
@@ -208,25 +214,26 @@ body {
     
 }
 
-.menu-button {
+.menu-button { 
     background: none;
     border: none;
-    font-size: 24px;
+    font-size: 38px;  /* Increase font size for a larger button */
     cursor: pointer;
     color: whitesmoke;
+    padding: 10px;  /* Add padding to increase clickable area */
 }
 
 .menu-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #632201;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     min-width: 160px;
 }
 
 .menu-content .color-option {
-    color: black;
+    color: whitesmoke;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -238,7 +245,7 @@ body {
 }
 
 .menu-content .color-option:hover {
-    background-color: #ddd;
+    background-color: #b33e04;
 }
 
 .menu:hover .menu-content {
