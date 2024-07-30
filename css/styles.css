@@ -251,3 +251,22 @@ body {
 .menu:hover .menu-content {
     display: block;
 }
+
+ /*Start Button*/
+#start-button {
+    background-color: #000000;
+    color: whitesmoke;
+    border: none;
+    padding: 5px 30px;
+    font-size: 1.5em;
+    cursor: url("../assets/cursors/Ghost.cur"), auto;
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 190px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#start-button:hover {
+    background-color: #b33e04;
+}

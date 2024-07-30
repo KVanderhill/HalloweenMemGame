@@ -1,21 +1,20 @@
-
 /*Adds audio in game from files*/
 class AudioController {
     constructor() {
-        //this.bgMusic = new Audio('./assets/audio/creepy.mp3');
+        // this.bgMusic = new Audio('./assets/audio/creepy.mp3');
         this.flipSound = new Audio('./assets/audio/flip.wav');
         this.matchSound = new Audio('./assets/audio/match.wav');
         this.victorySound = new Audio('./assets/audio/victory.wav');
         this.gameOverSound = new Audio('./assets/audio/gameOver.wav');
-        //this.bgMusic.volume = 0.2;
-        //this.bgMusic.loop = true;
+        // this.bgMusic.volume = 0.2;
+        // this.bgMusic.loop = true;
     }
     startMusic() {
-       //this.bgMusic.play();
+        // this.bgMusic.play();
     }
-   stopMusic() {
-       // this.bgMusic.pause();
-       //this.bgMusic.currentTime = 0;
+    stopMusic() {
+        // this.bgMusic.pause();
+        // this.bgMusic.currentTime = 0;
     }
     flip() {
         this.flipSound.play();
@@ -24,11 +23,11 @@ class AudioController {
         this.matchSound.play();
     }
     victory() {
-        //this.stopMusic();
+        // this.stopMusic();
         this.victorySound.play();
     }
     gameOver() {
-        //this.stopMusic();
+        // this.stopMusic();
         this.gameOverSound.play();
     }
 }
@@ -38,9 +37,10 @@ class MixOrMatch {
         this.cardsArray = cards;
         this.totalTime = totalTime;
         this.timeRemaining = totalTime;
-        this.timer = document.getElementById('time-remaining')
+        this.timer = document.getElementById('time-remaining');
         this.ticker = document.getElementById('flips');
         this.audioController = new AudioController();
+        this.gameStarted = false; // Track game start state
     }
 
     startGame() {
@@ -49,71 +49,81 @@ class MixOrMatch {
         this.cardToCheck = null;
         this.matchedCards = [];
         this.busy = true;
-        setTimeout(() => {
-            //this.audioController.startMusic();
-            this.shuffleCards(this.cardsArray);
-            this.countdown = this.startCountdown();
-            this.busy = false;
-        }, 500)
+        this.gameStarted = false; // Reset game start state
         this.hideCards();
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
+        // Hide the start button initially
+        document.getElementById('start-button').style.display = 'block';
     }
+
+    startTimer() {
+        this.gameStarted = true; // Set game start state
+        this.countdown = this.startCountdown();
+    }
+
     startCountdown() {
         return setInterval(() => {
             this.timeRemaining--;
             this.timer.innerText = this.timeRemaining;
-            if(this.timeRemaining === 0)
+            if (this.timeRemaining === 0)
                 this.gameOver();
         }, 1000);
     }
+
     gameOver() {
         clearInterval(this.countdown);
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
     }
+
     victory() {
         clearInterval(this.countdown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
     }
+
     hideCards() {
         this.cardsArray.forEach(card => {
             card.classList.remove('visible');
             card.classList.remove('matched');
         });
     }
+
     flipCard(card) {
-        if(this.canFlipCard(card)) {
+        if (this.canFlipCard(card)) {
             this.audioController.flip();
             this.totalClicks++;
             this.ticker.innerText = this.totalClicks;
             card.classList.add('visible');
 
-            if(this.cardToCheck) {
+            if (this.cardToCheck) {
                 this.checkForCardMatch(card);
             } else {
                 this.cardToCheck = card;
             }
         }
     }
+
     checkForCardMatch(card) {
-        if(this.getCardType(card) === this.getCardType(this.cardToCheck))
+        if (this.getCardType(card) === this.getCardType(this.cardToCheck))
             this.cardMatch(card, this.cardToCheck);
-        else 
+        else
             this.cardMismatch(card, this.cardToCheck);
 
         this.cardToCheck = null;
     }
+
     cardMatch(card1, card2) {
         this.matchedCards.push(card1);
         this.matchedCards.push(card2);
         card1.classList.add('matched');
         card2.classList.add('matched');
         this.audioController.match();
-        if(this.matchedCards.length === this.cardsArray.length)
+        if (this.matchedCards.length === this.cardsArray.length)
             this.victory();
     }
+
     cardMismatch(card1, card2) {
         this.busy = true;
         setTimeout(() => {
@@ -122,23 +132,26 @@ class MixOrMatch {
             this.busy = false;
         }, 1000);
     }
+
     /*Shuffle algorithm*/
-    shuffleCards(cardsArray) { 
+    shuffleCards(cardsArray) {
         for (let i = cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             cardsArray[randIndex].style.order = i;
             cardsArray[i].style.order = randIndex;
         }
     }
+
     getCardType(card) {
         return card.getElementsByClassName('card-value')[0].src;
     }
+
     canFlipCard(card) {
-        return !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
+        return this.gameStarted && !this.busy && !this.matchedCards.includes(card) && card !== this.cardToCheck;
     }
 }
 
-if (document.readyState == 'loading') {
+if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', ready);
 } else {
     ready();
@@ -161,5 +174,11 @@ function ready() {
             game.flipCard(card);
         });
     });
-   
+
+    // Start button event listener
+    const startButton = document.getElementById('start-button');
+    startButton.addEventListener('click', () => {
+        startButton.style.display = 'none'; // Hide start button after clicking
+        game.startTimer(); // Start the timer
+    });
 }
