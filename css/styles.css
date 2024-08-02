@@ -211,16 +211,15 @@ body {
     position: relative;
     display: inline-block;
     margin: 10px;
-    
 }
 
-.menu-button { 
+.menu-button {
     background: none;
     border: none;
     font-size: 38px;  /* Increase font size for a larger button */
     cursor: pointer;
     color: whitesmoke;
-    padding: 10px;  /* Add padding to increase clickable area */
+    padding: 30px;  /* Add padding to increase clickable area */
 }
 
 .menu-content {
@@ -230,6 +229,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     min-width: 160px;
+    right: 0; /* Aligns the menu to the right of the button */
 }
 
 .menu-content .color-option {
@@ -241,7 +241,7 @@ body {
     background: none;
     cursor: pointer;
     width: 100%;
-    text-align: left;
+    text-align: center;
 }
 
 .menu-content .color-option:hover {
@@ -251,6 +251,59 @@ body {
 .menu:hover .menu-content {
     display: block;
 }
+
+/* Nested dropdown styles */
+.dropdown {
+    position: relative;
+    
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    left: 100%; /* Aligns the nested menu to the right */
+    top: 0;
+    background-color: #632201;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-button {
+    color: whitesmoke;
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    width: 105%;
+    text-align: right;
+    
+}
+
+.dropdown-button::after {
+    content: ' \25B6'; /* Right arrow symbol */
+    float: right;
+    margin-left: 10px; 
+}
+
+.dropdown-content a {
+    color: whitesmoke;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #b33e04;
+}
+
 
  /*Start Button*/
 #start-button {

@@ -7,181 +7,151 @@
         <title>Monster Matchup</title>
     </head>
     <body>
+
         <h1 class="page-title">Monster Matchup</h1>
 
-  <!-- Meatballs Menu for Background Color Selection -->
-  <div class="menu">
+<!-- Menu for Background Color Selection -->
+<div class="menu">
     <button class="menu-button">&#x22EE;</button>
     <div class="menu-content">
-        <button class="color-option" data-color="linear-gradient(to right, #b33e04, #632201)">Original</button>
-        <button class="color-option" data-color="linear-gradient(to right, #1c1c21, #606364)">Dark Blue</button>
-        <button class="color-option" data-color="linear-gradient(to right, #121111, #454545)">Black-Gray</button>
-        <button class="color-option" data-color="linear-gradient(to right, #1a1113, #5c5361)">Muted Purple</button>
-        <button class="color-option" data-color="linear-gradient(to right, #1a1913, #757456)">Moss Green</button>
+        <div class="dropdown">
+            <button class="dropdown-button">Themes</button>
+            <div class="dropdown-content">
+                <button class="color-option" data-color="linear-gradient(to right, #b33e04, #632201)">Original</button>
+                <button class="color-option" data-color="linear-gradient(to right, #1c1c21, #606364)">Dark Blue</button>
+                <button class="color-option" data-color="linear-gradient(to right, #121111, #454545)">Black-Gray</button>
+                <button class="color-option" data-color="linear-gradient(to right, #1a1113, #5c5361)">Muted Purple</button>
+                <button class="color-option" data-color="linear-gradient(to right, #1a1913, #757456)">Moss Green</button>
+            </div>
+        </div>
     </div>
 </div>
 
-        <div class="overlay-text visible">
-            Click to Enter
+
+
+        <div class="overlay-text visible">Click to Enter</div>
+        <div id="game-over-text" class="overlay-text">Game Over<span class="overlay-text-small">Click to Replay</span>
         </div>
-        <div id="game-over-text" class="overlay-text">
-            Game Over
-            <span class="overlay-text-small">Click to Replay</span>
+        <div id="victory-text" class="overlay-text">You Win!<span class="overlay-text-small">Click to Replay</span>
         </div>
-        <div id="victory-text" class="overlay-text">
-            You Win!
-            <span class="overlay-text-small">Click to Replay</span>
-        </div>
+
         <div class="game-container">
             <div class="game-info-container">
-                <div class="game-info">Time <span id="time-remaining">100</span></div>
-                <div class="game-info">Flips <span id="flips">0</span></div>
+                <div class="game-info">Time:<br><span id="time-remaining">100</span></div>
+                <div class="game-info">Flips:<br><span id="flips">0</span></div>
                 <button id="start-button" style="display:none;">Start</button>
             </div>
             
-            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/spells1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/spells1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/spells1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/spells1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/eyeball3.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/eyeball3.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/eyeball3.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/eyeball3.png" alt="Card Front"></div>
             </div>
           
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/couldron1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/couldron1.png" alt="Card Front"></div>
             </div>
            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/couldron1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/couldron1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/pumpkins1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/pumpkins1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/pumpkins1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/pumpkins1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/haunted1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/haunted1.png" alt="Card Front"></div>
             </div>
           
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/haunted1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/haunted1.png" alt="Card Front"></div>
             </div>
            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/zombie1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/zombie1.png" alt="Card Front"></div>
             </div>
           
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/zombie1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/zombie1.png" alt="Card Front"></div>
             </div>
             
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/candy1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/candy1.png" alt="Card Front"></div>
             </div>
            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/candy1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/candy1.png" alt="Card Front"></div>
             </div>
            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/graveyard1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/graveyard1.png" alt="Card Front"></div>
             </div>
            
             <div class="card">
                 <div class="card-back card-face">
-                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back">
-                </div>
+                    <img class="ghost" src="./assets/hal-img/Halloween2.png" alt="Card Back"></div>
                 <div class="card-front card-face">
-                    <img class="card-value" src="./assets/hal-img/graveyard1.png" alt="Card Front">
-                </div>
+                    <img class="card-value" src="./assets/hal-img/graveyard1.png" alt="Card Front"></div>
             </div>
             </div>
         </div>

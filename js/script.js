@@ -48,9 +48,10 @@ class MixOrMatch {
         this.timeRemaining = this.totalTime;
         this.cardToCheck = null;
         this.matchedCards = [];
-        this.busy = true;
+        this.busy = false;
         this.gameStarted = false; // Reset game start state
         this.hideCards();
+        this.shuffleCards(this.cardsArray); // Shuffle cards when the game starts
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
         // Hide the start button initially
