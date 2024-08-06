@@ -12,3 +12,21 @@ colorOptions.forEach(option => {
         document.body.style.background = color;
     });
 });
+
+const menuButton = document.querySelector('.menu-button');
+const menuContent = document.querySelector('.menu-content');
+
+menuButton.addEventListener('click', function() {
+    if (menuContent.style.display === 'block') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'block';
+    }
+});
+
+// Optional: Close the menu if clicked outside of it
+document.addEventListener('click', function(event) {
+    if (!menuButton.contains(event.target) && !menuContent.contains(event.target)) {
+        menuContent.style.display = 'none';
+    }
+});

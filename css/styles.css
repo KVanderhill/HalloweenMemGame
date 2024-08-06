@@ -1,4 +1,4 @@
-/*pulls font from assets folder*/
+/*******Fonts for Text in Game*******/
 @font-face {
     font-family: "Scary Halloween";
     src: url(../assets/halloween-fonts/ScaryHalloweenFont-Bold.woff) format("woff"), url("../assets/halloween-fonts/ScaryHalloweenFont-Bold.woff2") format("woff2")
@@ -12,21 +12,21 @@
     box-sizing: border-box;
 
 }
-/*creates ghost cursor*/
+/******Ghost Hover*******/
 html{
     min-height: 100vh;
     cursor: url("../assets/cursors/Ghost.cur"), auto;
     font-family: October Crow;
 }
 
-/*background color*/
+/******Background Color*******/
 body {
     margin: 0;
     background: radial-gradient(#b33e04, #632201);
 
 }
 
-/*main title for game*/
+/*******Main Title for Game*******/
 .page-title {
     color:whitesmoke;
     font-family: Scary Halloween, serif;
@@ -35,37 +35,40 @@ body {
     font-size: 6em;
 }
 
-/*adjusts time & flips location*/
+/********Adjusts Time & Flips location********/
 .game-info-container {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: space-between;
     margin-top: -120px; /* Added to move the game info container up */
+    display: flex;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(5, auto); 
+    justify-content: space-between; 
 }
 
-/*allows size adjustment of timer & flips font*/
+/*******Allows Size Adjustment of Timer & Flips Font********/
 .game-info {
     color: whitesmoke;
     font-size: 3em;
 }
 
+/*******Grid Layouts for Different Levels*******/
 .game-container {
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
     justify-content: center;
     perspective: 500px;
+    gap: 10px;
 }
 
-/*card size*/
+/******Card Size******/
 .card {
     position: relative;
     height: 175px;
     width: 125px;
 }
 
-/*adds another cursor when hovering over card*/
+/*******Cursor for Hovering Over a Card*******/
 .card:hover {
     cursor: url("../assets/cursors/GhostHover.cur"), auto;
 }
@@ -97,7 +100,7 @@ body {
 .card.matched .card-front .card-value {
     animation: dance 1s linear 100ms;
 }
-/*creates overlay for start and end text*/
+/********Creates Overlay for Start and End Text********/
 .overlay-text {
     top: 0;
     left: 0;
@@ -114,12 +117,12 @@ body {
     transition: background-color 500ms, font-size 500ms;
 }
 
-/*replay*/
+/******Replay Text*********/
 .overlay-text-small {
     font-size: .3em;
 }
 
-/*click to enter*/
+/******click to enter*******/
 .overlay-text.visible {
     display: flex;
     animation: overlay-grow 600ms forwards;
@@ -171,7 +174,7 @@ body {
     transform: translateY(0);
 }
 
-/*dance effect for images*/
+/******dance effect for images******/
 @keyframes dance {
     0%, 100% {
         transform: rotate(0);
@@ -184,6 +187,7 @@ body {
     }
 }
 
+/*******Overlay Text*********/
 @keyframes overlay-grow {
     from {
         background-color: rgba(0, 0, 0, 0);
@@ -206,20 +210,20 @@ body {
     }
 }
 
-/* New styles for menu and background color options */
+/*********Menu Button & Nested Menu for Color Options*********/
 .menu {
     position: relative;
     display: inline-block;
-    margin: 0px; /*altered this*/
+    margin: 0px; 
 }
 
 .menu-button {
     background: none;
     border: none;
-    font-size: 38px;  /* Increase font size for a larger button */
+    font-size: 38px; 
     cursor: pointer;
     color: whitesmoke;
-    padding: 2px;  /* Add padding to increase clickable area altered this from 30 to 10*/
+    padding: 2px; 
 }
 
 .menu-content {
@@ -229,8 +233,8 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
     min-width: 160px;
-    top: 40px; /* Position the menu directly underneath the button altered this from 100% to 40px*/
-    left: 0; /* Aligns the menu to the left of the button */
+    top: 40px; 
+    left: 0; 
 }
 
 /*color option button*/
@@ -254,18 +258,18 @@ body {
     display: block;
 }
 
-/* Nested dropdown styles */
+/********Nested Dropdown Styles********/
 .dropdown {
     position: relative;
     
     
 }
 
-/*color option drop down background color*/
+/*******Color Option Drop Down Background Color*********/
 .dropdown-content {
     display: none;
     position: absolute;
-    left: 100%; /* Aligns the nested menu to the right */
+    left: 100%; 
     top: 0;
     background-color: #1a1919;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -277,7 +281,7 @@ body {
     display: block;
 }
 
-/*theme menu button*/
+/*******Theme Menu Button********/
 .dropdown-button {
     color: whitesmoke;
     padding: 12px 10px;
@@ -292,7 +296,7 @@ body {
 }
 
 .dropdown-button::after {
-    content: ' \25B6'; /* Right arrow symbol */
+    content: ' \25B6'; /* Right Arrow Symbol */
     float: right;
     margin-left: 10px; 
 }
@@ -309,7 +313,7 @@ body {
 }
 
 
- /*Start Button*/
+ /*********Start Button*********/
 #start-button {
     background-color: #000000;
     color: whitesmoke;

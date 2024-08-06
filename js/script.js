@@ -134,13 +134,19 @@ class MixOrMatch {
         }, 1000);
     }
 
-    /*Shuffle algorithm*/
+    /* Fisher Yates Shuffle Algorithm */
     shuffleCards(cardsArray) {
         for (let i = cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i + 1));
-            cardsArray[randIndex].style.order = i;
-            cardsArray[i].style.order = randIndex;
+            // Swap elements
+            [cardsArray[i], cardsArray[randIndex]] = [cardsArray[randIndex], cardsArray[i]];
         }
+        
+        // After shuffling, update the DOM
+        cardsArray.forEach((card, index) => {
+            card.style.order = index; // Ensure order reflects the new position
+        });
+    
     }
 
     getCardType(card) {
@@ -159,12 +165,22 @@ if (document.readyState === 'loading') {
 }
 
 function ready() {
+
+    console.log('Ready function executed'); // Debugging statement
+
+
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
+
+    console.log('Overlays:', overlays); // Debugging statement
+    console.log('Cards:', cards); // Debugging statement
+
+
     let game = new MixOrMatch(100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
+            console.log('Overlay clicked'); // Debugging statement
             overlay.classList.remove('visible');
             game.startGame();
         });
@@ -172,6 +188,7 @@ function ready() {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
+            console.log('Card clicked'); // Debugging statement
             game.flipCard(card);
         });
     });
@@ -179,6 +196,7 @@ function ready() {
     // Start button event listener
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', () => {
+        console.log('Start button clicked'); // Debugging statement
         startButton.style.display = 'none'; // Hide start button after clicking
         game.startTimer(); // Start the timer
     });
