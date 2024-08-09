@@ -182,6 +182,8 @@ function ready() {
         overlay.addEventListener('click', () => {
             console.log('Overlay clicked'); // Debugging statement
             overlay.classList.remove('visible');
+            cards = Array.from(document.getElementsByClassName('card')); // Update the array in case new cards were added
+            game.cardsArray = cards; // Update the game's card array
             game.startGame();
         });
     });

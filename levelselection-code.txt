@@ -1,0 +1,19 @@
+<!--Menu for Level Difficulty-->
+        <div class="dropdown">
+            <button class="dropdown-button">Level Selection</button>
+            <div class="dropdown-content">
+                <button class="level-button" data-level="easy">Easy</button>
+                <button class="level-button" data-level="medium">Medium</button>
+                <button class="level-button" data-level="hard">Hard</button>
+            </div>
+			
+			
+			
+			
+			
+			
+			.menu-content .level-button {
+			
+			.menu-content .level-button:hover {
+			
+			

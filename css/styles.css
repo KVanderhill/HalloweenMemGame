@@ -32,12 +32,12 @@ body {
     font-family: Scary Halloween, serif;
     font-weight: normal;
     text-align: center;
-    font-size: 6em;
+    font-size: 4em;
 }
 
 /********Adjusts Time & Flips location********/
 .game-info-container {
-    margin-top: -120px; /* Added to move the game info container up */
+    margin-top: -130px; /* Added to move the game info container up */
     display: flex;
     grid-column: 1 / -1;
     grid-template-columns: repeat(4, auto);
@@ -48,14 +48,15 @@ body {
 /*******Allows Size Adjustment of Timer & Flips Font********/
 .game-info {
     color: whitesmoke;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 /*******Grid Layouts for Different Levels*******/
 .game-container {
     margin: 50px auto;
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(5, auto); /* 5 columns */
+    grid-template-rows: repeat(4, auto);    /* 4 rows */
     justify-content: center;
     perspective: 500px;
     gap: 10px;
@@ -64,8 +65,8 @@ body {
 /******Card Size******/
 .card {
     position: relative;
-    height: 175px;
-    width: 125px;
+    height: 160px;
+    width: 115px;
 }
 
 /*******Cursor for Hovering Over a Card*******/
@@ -214,7 +215,7 @@ body {
 .menu {
     position: relative;
     display: inline-block;
-    margin: 0px; 
+    margin: 45px; 
 }
 
 .menu-button {
@@ -321,11 +322,12 @@ body {
     padding: 5px 30px;
     font-size: 1.5em;
     cursor: url("../assets/cursors/Ghost.cur"), auto;
-    margin-top: 5px;
-    border-radius: 10px;
-    width: 190px;
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 120px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 #start-button:hover {
