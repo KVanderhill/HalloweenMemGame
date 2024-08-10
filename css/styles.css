@@ -23,6 +23,8 @@ html{
 body {
     margin: 0;
     background: radial-gradient(#b33e04, #632201);
+    transform: scale(0.9); /* Scale down the entire application */
+    height: 100vh;
 
 }
 
@@ -32,26 +34,25 @@ body {
     font-family: Scary Halloween, serif;
     font-weight: normal;
     text-align: center;
-    font-size: 4em;
+    font-size: 6em;
+    margin-top: 50px;
 }
 
 /********Adjusts Time & Flips location********/
 .game-info-container {
-    margin-top: -130px; /* Added to move the game info container up */
     display: flex;
+    margin-top: -100px; /* Added to move the game info container up */
     grid-column: 1 / -1;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(5, auto); 
     justify-content: space-between; 
 }
 
 /*******Allows Size Adjustment of Timer & Flips Font********/
 .game-info {
     color: whitesmoke;
-    font-size: 2.5em;
+    font-size: 3em;
 }
 
-/*******Grid Layouts for Different Levels*******/
+/*******Grid Layouts*******/
 .game-container {
     margin: 50px auto;
     display: grid;
@@ -116,11 +117,12 @@ body {
     color: #6d6d79;
     font-family: Scary Halloween, serif;
     transition: background-color 500ms, font-size 500ms;
+    font-size: 10vw; /* Adjusts size relative to viewport width */
 }
 
 /******Replay Text*********/
 .overlay-text-small {
-    font-size: .3em;
+    font-size: 2vw; /* Adjusts size relative to viewport width */
 }
 
 /******click to enter*******/
@@ -215,13 +217,13 @@ body {
 .menu {
     position: relative;
     display: inline-block;
-    margin: 45px; 
+    margin: 35px;
 }
 
 .menu-button {
     background: none;
     border: none;
-    font-size: 38px; 
+    font-size: 45px; 
     cursor: pointer;
     color: whitesmoke;
     padding: 2px; 
@@ -320,7 +322,7 @@ body {
     color: whitesmoke;
     border: none;
     padding: 5px 30px;
-    font-size: 1.5em;
+    font-size: 2em;
     cursor: url("../assets/cursors/Ghost.cur"), auto;
     margin-top: 20px;
     border-radius: 25px;

@@ -166,21 +166,17 @@ if (document.readyState === 'loading') {
 
 function ready() {
 
-    console.log('Ready function executed'); // Debugging statement
 
 
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
 
-    console.log('Overlays:', overlays); // Debugging statement
-    console.log('Cards:', cards); // Debugging statement
 
 
     let game = new MixOrMatch(100, cards);
 
     overlays.forEach(overlay => {
         overlay.addEventListener('click', () => {
-            console.log('Overlay clicked'); // Debugging statement
             overlay.classList.remove('visible');
             cards = Array.from(document.getElementsByClassName('card')); // Update the array in case new cards were added
             game.cardsArray = cards; // Update the game's card array
@@ -190,7 +186,6 @@ function ready() {
 
     cards.forEach(card => {
         card.addEventListener('click', () => {
-            console.log('Card clicked'); // Debugging statement
             game.flipCard(card);
         });
     });
@@ -198,7 +193,6 @@ function ready() {
     // Start button event listener
     const startButton = document.getElementById('start-button');
     startButton.addEventListener('click', () => {
-        console.log('Start button clicked'); // Debugging statement
         startButton.style.display = 'none'; // Hide start button after clicking
         game.startTimer(); // Start the timer
     });
