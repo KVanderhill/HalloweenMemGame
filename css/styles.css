@@ -23,7 +23,6 @@ html{
 body {
     margin: 0;
     background: radial-gradient(#b33e04, #632201);
-    transform: scale(0.9); /* Scale down the entire application */
     height: 100vh;
 
 }
@@ -34,7 +33,7 @@ body {
     font-family: Scary Halloween, serif;
     font-weight: normal;
     text-align: center;
-    font-size: 6em;
+    font-size: 5em;
     margin-top: 50px;
 }
 
@@ -61,6 +60,8 @@ body {
     justify-content: center;
     perspective: 500px;
     gap: 10px;
+    transform: scale(0.9); /* Scale down the entire application */
+    
 }
 
 /******Card Size******/
@@ -68,8 +69,8 @@ body {
     position: relative;
     height: 160px;
     width: 115px;
+    transition: all 0.3s ease; /* Smooth resizing */
 }
-
 /*******Cursor for Hovering Over a Card*******/
 .card:hover {
     cursor: url("../assets/cursors/GhostHover.cur"), auto;
@@ -118,6 +119,7 @@ body {
     font-family: Scary Halloween, serif;
     transition: background-color 500ms, font-size 500ms;
     font-size: 10vw; /* Adjusts size relative to viewport width */
+    
 }
 
 /******Replay Text*********/
