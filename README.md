@@ -1,6 +1,6 @@
 # Halloween Memory Matching Game
-The Halloween Memory Matching Card Game is a web-based game that tests your memory skills
-with a fun Halloween twist. Match pairs of spooky-themed cards to win! The game features
+The Halloween Memory Matching Card Game is a web-based game that tests your memory skills<br>
+with a fun Halloween twist. Match pairs of spooky-themed cards to win! The game features<br>
 a countdown timer and smooth animations to keep the gameplay engaging.
 
 &nbsp;
@@ -21,15 +21,15 @@ Replay: Click replay to try again.
 &nbsp;
 
 ## File Structure
-index.html: The main HTML file that sets up the game structure.
-styles.css: Contains the styling for the game, including card designs and responsive layout.
-script.js: Implements the game logic, including card flipping, matching, and timer functionality.
+index.html: The main HTML file that sets up the game structure.<br>
+styles.css: Contains the styling for the game, including card designs and responsive layout.<br>
+script.js: Implements the game logic, including card flipping, matching, and timer functionality.<br>
 theme.js: Implements different themes users can choose from.
 
 &nbsp;
 
 ## Features
-Smooth Animations: Enjoy fluid transitions when flipping cards and shuffling.
+Smooth Animations: Enjoy fluid transitions when flipping cards and shuffling.<br>
 User Feedback: Visual cues for matches, game over, and flipping the cards.
 
 &nbsp;
