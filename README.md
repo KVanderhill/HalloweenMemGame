@@ -10,12 +10,12 @@ a countdown timer and smooth animations to keep the gameplay engaging.
 &nbsp;
 
 ## Game Functionality
-Start Game: Click the "Start" button to shuffle and reveal the cards.
-Menu: Choose from 5 different background themes.
-Card Flipping: Click on cards to reveal their images. Match pairs to keep them face up.
-Timer: A countdown timer adds urgency to the game, starting from 100 seconds.
-Flips: Keeps track of the number of flips you aquired in order to win.
-End Game: The game concludes when all pairs are matched or the timer reaches zero.
+Start Game: Click the "Start" button to shuffle and reveal the cards.<br>
+Menu: Choose from 5 different background themes.<br>
+Card Flipping: Click on cards to reveal their images. Match pairs to keep them face up.<br>
+Timer: A countdown timer adds urgency to the game, starting from 100 seconds.<br>
+Flips: Keeps track of the number of flips you aquired in order to win.<br>
+End Game: The game concludes when all pairs are matched or the timer reaches zero.<br>
 Replay: Click replay to try again.
 
 &nbsp;
