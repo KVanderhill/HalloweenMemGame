@@ -3,6 +3,8 @@ The Halloween Memory Matching Card Game is a web-based game that tests your memo
 with a fun Halloween twist. Match pairs of spooky-themed cards to win! The game features
 a countdown timer and smooth animations to keep the gameplay engaging.
 
+![Enter the Game](Entrance-game.png)
+
 ## Game Functionality
 Start Game: Click the "Start" button to shuffle and reveal the cards.
 Menu: Choose from 5 different background themes.
