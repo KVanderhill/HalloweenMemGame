@@ -51,7 +51,9 @@ class MixOrMatch {
         this.busy = false;
         this.gameStarted = false; // Reset game start state
         this.hideCards();
+        setTimeout(() => { // Add delay before shuffling
         this.shuffleCards(this.cardsArray); // Shuffle cards when the game starts
+    }, 500); // Adjust delay as needed
         this.timer.innerText = this.timeRemaining;
         this.ticker.innerText = this.totalClicks;
         // Hide the start button initially
@@ -76,12 +78,14 @@ class MixOrMatch {
         clearInterval(this.countdown);
         this.audioController.gameOver();
         document.getElementById('game-over-text').classList.add('visible');
+       
     }
 
     victory() {
         clearInterval(this.countdown);
         this.audioController.victory();
         document.getElementById('victory-text').classList.add('visible');
+       
     }
 
     hideCards() {
@@ -136,16 +140,18 @@ class MixOrMatch {
 
     /* Fisher Yates Shuffle Algorithm */
     shuffleCards(cardsArray) {
+         
+
         for (let i = cardsArray.length - 1; i > 0; i--) {
             let randIndex = Math.floor(Math.random() * (i + 1));
             // Swap elements
             [cardsArray[i], cardsArray[randIndex]] = [cardsArray[randIndex], cardsArray[i]];
         }
-        
         // After shuffling, update the DOM
         cardsArray.forEach((card, index) => {
             card.style.order = index; // Ensure order reflects the new position
         });
+
     
     }
 
@@ -165,14 +171,8 @@ if (document.readyState === 'loading') {
 }
 
 function ready() {
-
-
-
     let overlays = Array.from(document.getElementsByClassName('overlay-text'));
     let cards = Array.from(document.getElementsByClassName('card'));
-
-
-
     let game = new MixOrMatch(100, cards);
 
     overlays.forEach(overlay => {

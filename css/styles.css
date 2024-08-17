@@ -69,8 +69,10 @@ body {
     position: relative;
     height: 160px;
     width: 115px;
-    transition: all 0.3s ease; /* Smooth resizing */
+    transition: all 0.3s ease;
 }
+
+
 /*******Cursor for Hovering Over a Card*******/
 .card:hover {
     cursor: url("../assets/cursors/GhostHover.cur"), auto;
