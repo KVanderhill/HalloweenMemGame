@@ -39,7 +39,4 @@ User Feedback: Visual cues for matches, game over, and flipping the cards.
 2. Unzip the file to a location of your choice.
 3. Open index.html in a web browser to start playing.
 
-&nbsp;
 
-## Contributions
-Special thanks to [Kristy Vanderhill] (https://github.com/KVanderhill) for developing this game.
