@@ -1,4 +1,5 @@
 /*Adds audio in game from files*/
+/*Commented out certain audio features in case I want to add them back in later*/
 class AudioController {
     constructor() {
         // this.bgMusic = new Audio('./assets/audio/creepy.mp3');

@@ -1,12 +1,16 @@
 /*******Fonts for Text in Game*******/
 @font-face {
     font-family: "Scary Halloween";
-    src: url(../assets/halloween-fonts/ScaryHalloweenFont-Bold.woff) format("woff"), url("../assets/halloween-fonts/ScaryHalloweenFont-Bold.woff2") format("woff2")
+    src: url("../Assets/halloween-fonts/ScaryHalloweenFont-Bold.woff") format("woff"),
+         url("../Assets/halloween-fonts/ScaryHalloweenFont-Bold.woff2") format("woff2");
 }
+
 @font-face {
     font-family: "October Crow";
-    src: url(../assets/halloween-fonts/OctoberCrow.woff) format("woff"), url("../assets/halloween-fonts/OctoberCrow.woff2") format("woff2")
+    src: url("../Assets/halloween-fonts/OctoberCrow.woff") format("woff"),
+         url("../Assets/halloween-fonts/OctoberCrow.woff2") format("woff2");
 }
+
 
 *{
     box-sizing: border-box;
