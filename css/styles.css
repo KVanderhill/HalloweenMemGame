@@ -19,7 +19,7 @@
 /******Ghost Hover*******/
 html{
     min-height: 100vh;
-    cursor: url("../assets/cursors/Ghost.cur"), auto;
+    cursor: url("../Assets/cursors/Ghost.cur"), auto;
     font-family: October Crow;
 }
 
@@ -79,7 +79,7 @@ body {
 
 /*******Cursor for Hovering Over a Card*******/
 .card:hover {
-    cursor: url("../assets/cursors/GhostHover.cur"), auto;
+    cursor: url("../Assets/cursors/GhostHover.cur"), auto;
 }
 
 .card-face {
@@ -331,7 +331,7 @@ body {
     border: none;
     padding: 5px 30px;
     font-size: 2em;
-    cursor: url("../assets/cursors/Ghost.cur"), auto;
+    cursor: url("../Assets/cursors/Ghost.cur"), auto;
     margin-top: 20px;
     border-radius: 25px;
     width: 120px;
