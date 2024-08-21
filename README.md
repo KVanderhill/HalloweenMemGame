@@ -18,7 +18,7 @@ Flips: Keeps track of the number of flips you aquired in order to win.<br>
 End Game: The game concludes when all pairs are matched or the timer reaches zero.<br>
 Replay: Click replay to try again.
 
-&nbsp;
+&nbsp; 
 
 ## File Structure
 index.html: The main HTML file that sets up the game structure.<br>
@@ -35,8 +35,6 @@ User Feedback: Visual cues for matches, game over, and flipping the cards.
 &nbsp;
 
 ## Getting Started
-1. Download the latest version of the game.
-2. Unzip the file to a location of your choice.
-3. Open index.html in a web browser to start playing.
+Access the game [Here](https://kvanderhill.github.io/HalloweenMemGame/)
 
 
